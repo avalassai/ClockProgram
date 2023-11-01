@@ -13,6 +13,14 @@ function displaytime(date){
     let seconds = date.getSeconds();
    seconds = seconds<10 ? `0${seconds}`:seconds;
     let amorpm = hours <12 ? 'am' : 'pm';
+    hours = (hours%12) || 12;
+    hours = formatime(hours);
     
     return `${hours}:${min}:${seconds} ${amorpm}`;
+}
+
+function formatime(time){
+    time =  time.toString();
+    
+    return time.length<2 ? "0"+time : time;
 }
