@@ -15,7 +15,7 @@ function displaytime(date){
     let amorpm = hours <12 ? 'am' : 'pm';
     hours = (hours%12) || 12;
     hours = formatime(hours);
-    
+    min = formatime(min);
     return `${hours}:${min}:${seconds} ${amorpm}`;
 }
 
